@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--创建新的收货地址时的填写页面-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_color">
+
+    <!--一个cnToolbar栏-->
+    <testsdcard.com.maiyu.shopapp.widget.CnToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:title="@string/activity_create_location"
+        app:rightButtonText="@string/complete"/>
+
+    <!--嵌套4个LinearLayout:分别是，联系人，联系电话，联系地址，详细地址-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_view_block"
+        android:padding="@dimen/largePadding">
+
+        <!--收件人已经填写：-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/largePadding"
+            android:paddingBottom="@dimen/largePadding"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收件人"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginRight="10dp" />
+
+            <View style="@style/line_horizontal"/>
+
+            <testsdcard.com.maiyu.shopapp.widget.ClearEditText
+                android:id="@+id/edittxt_consignee"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/editText_base"
+                android:hint="请输入收件人姓名"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp" />
+
+        </LinearLayout>
+
+        <View style="@style/line_vertical"/>
+
+        <!--联系电话：-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/largePadding"
+            android:paddingBottom="@dimen/largePadding"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="联系电话"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginRight="10dp" />
+            <View
+                style="@style/line_horizontal"/>
+
+            <testsdcard.com.maiyu.shopapp.widget.ClearEditText
+                android:id="@+id/edittxt_phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/editText_base"
+                android:hint="请输入收件人电话"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:inputType="phone"/>
+
+        </LinearLayout>
+
+        <View style="@style/line_vertical" />
+
+        <!--联系地址：-->
+        <LinearLayout
+            android:id="@+id/ll_city_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/largePadding"
+            android:paddingBottom="@dimen/largePadding"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="联系地址"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginRight="10dp"/>
+            <View
+                style="@style/line_horizontal"/>
+
+            <TextView
+                android:id="@+id/txt_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:drawableRight="@mipmap/icon_right_64"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <View  style="@style/line_vertical" />
+
+        <!--详细联系住址：-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/largePadding"
+            android:paddingBottom="@dimen/largePadding"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="详细地址"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginRight="10dp" />
+
+            <View style="@style/line_horizontal"/>
+
+            <testsdcard.com.maiyu.shopapp.widget.ClearEditText
+                android:id="@+id/edittxt_add"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/editText_base"
+                android:hint="什么街多少号"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

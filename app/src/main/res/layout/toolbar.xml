@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--自定义Toolbar布局，用于设置左边按钮，中间显示，右边按钮-->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+        <EditText
+            android:id="@+id/toolbar_searchview"
+            style="@style/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingLeft="5dp"
+            android:textColorLink="#000"
+            android:drawableLeft="@mipmap/icon_search"
+            android:gravity="center"
+            android:hint="请输入搜索内容"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/toolbar_rightButton"
+            android:background="#000"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:textSize="10sp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/green"
+            android:visibility="gone"/>
+          <!--  style="@android:style/Widget.Material.Toolbar.Button.Navigation"/>-->
+
+
+</RelativeLayout>

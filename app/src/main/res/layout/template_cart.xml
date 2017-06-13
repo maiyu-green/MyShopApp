@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--购物车里每个商品的显示页面-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_list_item"
+    android:padding="5dp"
+    android:gravity="center_vertical"
+    >
+    <!--是否选中-->
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:focusable="false"
+        android:clickable="false"
+        style="@style/customCheckbox"/>
+    
+    <!--一个水平布局，放置图片，textView,数量加减器-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp">
+
+        <!--放置商品图片-->
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/drawee_view"
+            android:layout_width="120dp"
+            android:layout_height="120dp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp">
+            <!--显示名字-->
+            <TextView
+                android:id="@+id/text_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/gray"
+                android:textSize="16sp"
+                android:maxLines="3" />
+
+            <!--商品价格-->
+            <TextView
+                android:id="@+id/text_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/crimson"
+                android:layout_gravity="right" />
+            <!--加减计数器的显示-->
+           <testsdcard.com.maiyu.shopapp.widget.NumberAddSubView
+               android:id="@+id/num_control"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="10dp"
+               app:minValue="1"
+               app:maxValue="10" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

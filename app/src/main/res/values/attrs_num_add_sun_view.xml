@@ -1,0 +1,20 @@
+<resources>
+    <!--自定义购买按钮：当前值，最小和最大限制-->
+    <attr name="value" format="integer|reference"/>
+    <attr name="minValue" format="integer|reference"/>
+    <attr name="maxValue" format="integer|reference"/>
+    <attr name="editBackground" format="reference"/>
+    <attr name="buttonAddBackgroud" format="reference"/>
+    <attr name="buttonSubBackgroud" format="reference"/>
+
+    <!--定义一个NumberAddSunView用于设置购买数量按钮-->
+    <declare-styleable name="NumberAddSubView">
+        <attr name="value"/>
+        <attr name="minValue"/>
+        <attr name="maxValue"/>
+        <attr name="editBackground"/>
+        <attr name="buttonAddBackgroud"/>
+        <attr name="buttonSubBackgroud"/>
+    </declare-styleable>
+
+</resources>

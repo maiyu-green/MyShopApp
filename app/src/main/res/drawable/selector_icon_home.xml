@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--主页面背景页面选择器，可在代码中实现-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true" android:drawable="@mipmap/icon_home_press"/>
+    <item android:state_focused="true" android:drawable="@mipmap/icon_home_press"/>
+    <item android:drawable="@mipmap/icon_home"/>
+</selector>

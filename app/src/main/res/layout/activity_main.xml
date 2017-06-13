@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--主页面：采用线性布局:分为3部分（一个toolbar,一个切换frameLayout,一个显示底部的fragmentTahHost)-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+    <testsdcard.com.maiyu.shopapp.widget.CnToolbar
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    android:background="?attr/colorPrimary"
+    android:minHeight="?actionBarSize"
+    app:leftButtonIcon="@drawable/icon_back_32px"
+    app:showSearchView="false"
+    app:myTitle="首页"
+    />
+
+    <!--真正切换的页面，帧布局-->
+    <FrameLayout
+        android:id="@+id/realtabcontent"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"/>
+
+    <!--自定义的FragmentTabHost对象，此id设置一定要这样，不然会出错-->
+    <testsdcard.com.maiyu.shopapp.widget.FragmentTabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--假的frameLayout,只不过用FragmentTableHost规定必须要有内部frameLayout而已-->
+        <FrameLayout
+            android:id="@+id/tabcontent"
+            android:layout_width="0dp"
+            android:layout_weight="0"
+            android:layout_height="0dp"
+            />
+    </testsdcard.com.maiyu.shopapp.widget.FragmentTabHost>
+</LinearLayout>

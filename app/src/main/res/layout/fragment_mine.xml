@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--个人设置fragment的布局-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--一个帧布局：放置登录头像与文本-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="#d42a2a">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_img"
+            android:layout_gravity="center"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:src="@drawable/default_head"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#ffffff"/>
+        
+        <TextView
+            android:id="@+id/txt_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="登录"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="150dp"
+            android:textColor="#ffffff"/>
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--显示：我的订单，我的收藏，收货地址，退出登录按钮-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:padding="10dp"
+                android:id="@+id/txt_my_orders"
+                android:layout_marginLeft="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_list_o"
+                android:drawablePadding="20dp"
+                android:gravity="center"
+                android:text="我的订单"/>
+            <View style="@style/line_vertical"/>
+
+            <TextView
+                android:padding="10dp"
+                android:id="@+id/txt_my_collect"
+                android:layout_marginLeft="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_favorite"
+                android:drawablePadding="20dp"
+                android:gravity="center"
+                android:text="我的收藏"/>
+            <View style="@style/line_vertical"/>
+
+            <TextView
+                android:padding="10dp"
+                android:id="@+id/txt_my_location"
+                android:layout_marginLeft="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_location"
+                android:drawablePadding="20dp"
+                android:gravity="center"
+                android:text="收货地址"/>
+            <View style="@style/line_vertical"/>
+
+            <Button
+                android:background="#e8c61e3d"
+                android:padding="10dp"
+                android:id="@+id/mine_exit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="退出登录"
+                android:textColor="#ffffff"/>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

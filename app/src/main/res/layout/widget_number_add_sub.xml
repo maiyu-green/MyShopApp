@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--购买按钮数量选择器布局：加减按钮和TextView-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="2dp">
+
+    <!--定义一个减少按钮-->
+    <!--android:background="@drawable/bg_btn_style_white"-->
+    <Button
+        android:id="@+id/btn_sub"
+        style="@style/NumberAddSubDefStyle"
+        android:background="@drawable/bg_btn_style_white"
+        android:padding="2dp"
+        android:textColor="@color/black"
+        android:text="-" />
+
+    <!--定义数量显示文本-->
+    <TextView
+        android:id="@+id/etxt_view"
+        style="@style/NumberAddSubDefStyle"
+        android:minWidth="10dp"
+        android:gravity="center"/>
+
+    <!--定义一个增加按钮-->
+    <Button
+        android:id="@+id/btn_add"
+        style="@style/NumberAddSubDefStyle"
+        android:background="@drawable/bg_btn_style_white"
+        android:textColor="@color/black"
+        android:padding="2dp"
+        android:text="+"/>
+
+</LinearLayout>

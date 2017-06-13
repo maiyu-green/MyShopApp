@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--定义一个用于显示：分类商品左边recyclerview的文本-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@drawable/selector_list_item">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:textColor="@color/darkgrey"/>
+
+
+
+
+</LinearLayout>

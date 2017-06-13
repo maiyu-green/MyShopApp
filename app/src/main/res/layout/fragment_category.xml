@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--分类页面布局-->
+<!--左边一个RecyclerView,右边一个LinearLayout(包含SliderLayout，和MaterialLayout(RecyclerView))-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/basicPaddingSize">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview_category"
+        android:layout_width="@dimen/category_layout_width"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+    </android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="2dp"
+        >
+
+        <com.daimajia.slider.library.SliderLayout
+            android:id="@+id/slider"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            custom:pager_animation="Accordion"
+            custom:auto_cycle="true"
+            custom:indicator_visibility="visible"
+            custom:pager_animation_span="1100"
+            />
+
+
+
+
+
+        <com.cjj.MaterialRefreshLayout
+            android:id="@+id/refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            custom:overlay="false"
+            custom:wave_show="false"
+            custom:progress_colors="@array/material_colors"
+            custom:wave_height_type="higher"
+            custom:progress_show_circle_backgroud="false"
+            >
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview_wares"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+            </android.support.v7.widget.RecyclerView>
+
+
+
+        </com.cjj.MaterialRefreshLayout>
+
+
+    </LinearLayout>
+</LinearLayout>
